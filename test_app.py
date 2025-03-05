@@ -6,7 +6,7 @@ def client():
     return app.test_client()
 
 def test_add(client):
-    response = client.get('/add?num1=1&num2=20')
+    response = client.get('/add?num1=10&num2=20')
     assert response.status_code == 200
     assert response.json['result'] == 30
 
