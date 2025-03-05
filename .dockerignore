@@ -1,0 +1,4 @@
+flsk/
+__pycache__/
+*.pyc
+*.pyo
