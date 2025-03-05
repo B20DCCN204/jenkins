@@ -26,7 +26,7 @@ pipeline{
         stage("Run Tests") {
             steps {
                 script {
-                    sh "docker run --rm -d -p 5000:5000 ${IMAGE_NAME} python3 -m unittest discover -s /app -p 'test_*.py'"
+                    sh "docker run --rm ${IMAGE_NAME} python3 -m unittest discover -s /app -p 'test_*.py'"
                 }
             }
         }
