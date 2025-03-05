@@ -28,7 +28,7 @@ pipeline{
                 script {
                     sh "docker run --rm -d -p 5000:5000 --name ${CONTAINER_NAME} ${IMAGE_NAME}"
                     sleep 5
-                    sh "python3 -m unittest discover -s ./app -p 'test_*.py'"
+                    sh "python3 -m unittest discover -s app -p 'test_*.py'"
                     sh "docker stop ${CONTAINER_NAME}"
                 }
             }
